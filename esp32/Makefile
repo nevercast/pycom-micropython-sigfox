@@ -53,7 +53,8 @@ FROZEN_MPY_DIR = frozen
 
 include ../py/mkenv.mk
 
-CROSS_COMPILE = xtensa-esp32-elf-
+CROSS_COMPILE_PREFIX ?=
+CROSS_COMPILE = $(CROSS_COMPILE_PREFIX) xtensa-esp32-elf-
 
 ESP_IDF_PATH = $(IDF_PATH)
 ESP_IDF_COMP_PATH = $(ESP_IDF_PATH)/components
